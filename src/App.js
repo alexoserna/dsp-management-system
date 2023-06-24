@@ -1,7 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
 import React from 'react';
 import Sidebar from './components/SideBar';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#2a9461"
+    }
+  }
+});
 
 function App() {
   return (
