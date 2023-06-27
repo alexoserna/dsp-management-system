@@ -12,15 +12,8 @@ import VanAssignments from "./pages/VanAssignments";
 import VanData from "./pages/VanData";
 import WeeklyRoster from "./pages/WeeklyRoster";
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: "#2a9461"
-    }
-  }
-});
-
 function App() {
+
   return (
     <div>
       <Routes>

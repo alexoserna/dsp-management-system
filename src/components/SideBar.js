@@ -15,7 +15,7 @@ import ReportIcon from '@mui/icons-material/Summarize';
 import ViewWeekIcon from '@mui/icons-material/ViewWeek';
 import AssessmentIcon from '@mui/icons-material/Assessment';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-
+import { Link } from "react-router-dom";
 
 const drawerWidth = 240;
 
@@ -74,7 +74,7 @@ export default function Sidebar() {
       <CssBaseline />
       <Drawer variant='permanent' open={open}>
 
-      {/* This is the top of the toolbar, it switches between menu icon and a chevron */}
+        {/* This is the top of the toolbar, it switches between menu icon and a chevron */}
 
         <Toolbar>
           <IconButton
@@ -118,178 +118,211 @@ export default function Sidebar() {
         >
           <List>
             <ListItem disablePadding sx={{ display: 'block' }}>
-              <ListItemButton
-                sx={{
-                  minHeight: 48,
-                  justifyContent: open ? 'initial' : 'center',
-                  px: 2.5,
-                }}
+              <Link
+                to={"/DailyLog"}
               >
-                <ListItemIcon
+                <ListItemButton
                   sx={{
-                    minWidth: 0,
-                    mr: open ? 3 : 'auto',
-                    justifyContent: 'center',
+                    minHeight: 48,
+                    justifyContent: open ? 'initial' : 'center',
+                    px: 2.5,
                   }}
                 >
-                  <AssessmentIcon />
-                </ListItemIcon>
-                <ListItemText sx={{ opacity: open ? 1 : 0 }}>Daily Log</ListItemText>
-              </ListItemButton>
+                  <ListItemIcon
+                    sx={{
+                      minWidth: 0,
+                      mr: open ? 3 : 'auto',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    <AssessmentIcon />
+                  </ListItemIcon>
+                  <ListItemText sx={{ opacity: open ? 1 : 0 }}>Daily Log</ListItemText>
+                </ListItemButton>
+              </Link>
             </ListItem>
 
             <ListItem disablePadding sx={{ display: 'block' }}>
-              <ListItemButton
-                sx={{
-                  minHeight: 48,
-                  justifyContent: open ? 'initial' : 'center',
-                  px: 2.5,
-                }}
+              <Link
+                to={"/WeeklyRoster"}
               >
-                <ListItemIcon
+                <ListItemButton
                   sx={{
-                    minWidth: 0,
-                    mr: open ? 3 : 'auto',
-                    justifyContent: 'center',
+                    minHeight: 48,
+                    justifyContent: open ? 'initial' : 'center',
+                    px: 2.5,
                   }}
                 >
-                  <ViewWeekIcon />
-                </ListItemIcon>
-                <ListItemText sx={{ opacity: open ? 1 : 0 }}>Weekly Roster</ListItemText>
-              </ListItemButton>
+                  <ListItemIcon
+                    sx={{
+                      minWidth: 0,
+                      mr: open ? 3 : 'auto',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    <ViewWeekIcon />
+                  </ListItemIcon>
+                  <ListItemText sx={{ opacity: open ? 1 : 0 }}>Weekly Roster</ListItemText>
+                </ListItemButton>
+              </Link>
             </ListItem>
 
             <ListItem disablePadding sx={{ display: 'block' }}>
-              <ListItemButton
-                sx={{
-                  minHeight: 48,
-                  justifyContent: open ? 'initial' : 'center',
-                  px: 2.5,
-                }}
+              <Link
+                to={"/Reports"}
               >
-                <ListItemIcon
+                <ListItemButton
                   sx={{
-                    minWidth: 0,
-                    mr: open ? 3 : 'auto',
-                    justifyContent: 'center',
+                    minHeight: 48,
+                    justifyContent: open ? 'initial' : 'center',
+                    px: 2.5,
                   }}
                 >
-                  <ReportIcon />
-                </ListItemIcon>
-                <ListItemText sx={{ opacity: open ? 1 : 0 }}>Reports</ListItemText>
-              </ListItemButton>
+                  <ListItemIcon
+                    sx={{
+                      minWidth: 0,
+                      mr: open ? 3 : 'auto',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    <ReportIcon />
+                  </ListItemIcon>
+                  <ListItemText sx={{ opacity: open ? 1 : 0 }}>Reports</ListItemText>
+                </ListItemButton>
+              </Link>
             </ListItem>
 
             <ListItem disablePadding sx={{ display: 'block' }}>
-              <ListItemButton
-                sx={{
-                  minHeight: 48,
-                  justifyContent: open ? 'initial' : 'center',
-                  px: 2.5,
-                }}
+              <Link
+                to={"/Associates"}
               >
-                <ListItemIcon
+                <ListItemButton
                   sx={{
-                    minWidth: 0,
-                    mr: open ? 3 : 'auto',
-                    justifyContent: 'center',
+                    minHeight: 48,
+                    justifyContent: open ? 'initial' : 'center',
+                    px: 2.5,
                   }}
                 >
-                  <Groups />
-                </ListItemIcon>
-                <ListItemText sx={{ opacity: open ? 1 : 0 }}>Delivery Associates</ListItemText>
-              </ListItemButton>
+                  <ListItemIcon
+                    sx={{
+                      minWidth: 0,
+                      mr: open ? 3 : 'auto',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    <Groups />
+                  </ListItemIcon>
+                  <ListItemText sx={{ opacity: open ? 1 : 0 }}>Delivery Associates</ListItemText>
+                </ListItemButton>
+              </Link>
             </ListItem>
 
             <ListItem disablePadding sx={{ display: 'block' }}>
-              <ListItemButton
-                sx={{
-                  minHeight: 48,
-                  justifyContent: open ? 'initial' : 'center',
-                  px: 2.5,
-                }}
+              <Link
+                to={"/VanData"}
               >
-                <ListItemIcon
+                <ListItemButton
                   sx={{
-                    minWidth: 0,
-                    mr: open ? 3 : 'auto',
-                    justifyContent: 'center',
+                    minHeight: 48,
+                    justifyContent: open ? 'initial' : 'center',
+                    px: 2.5,
                   }}
                 >
-                  <Delivery />
-                </ListItemIcon>
-                <ListItemText sx={{ opacity: open ? 1 : 0 }}>Van Database</ListItemText>
-              </ListItemButton>
+                  <ListItemIcon
+                    sx={{
+                      minWidth: 0,
+                      mr: open ? 3 : 'auto',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    <Delivery />
+                  </ListItemIcon>
+                  <ListItemText sx={{ opacity: open ? 1 : 0 }}>Van Database</ListItemText>
+                </ListItemButton>
+              </Link>
             </ListItem>
 
             <ListItem disablePadding sx={{ display: 'block' }}>
-              <ListItemButton
-                sx={{
-                  minHeight: 48,
-                  justifyContent: open ? 'initial' : 'center',
-                  px: 2.5,
-                }}
+              <Link
+                to={"/VanAssignments"}
               >
-                <ListItemIcon
+                <ListItemButton
                   sx={{
-                    minWidth: 0,
-                    mr: open ? 3 : 'auto',
-                    justifyContent: 'center',
+                    minHeight: 48,
+                    justifyContent: open ? 'initial' : 'center',
+                    px: 2.5,
                   }}
                 >
-                  <AssignmentIcon />
-                </ListItemIcon>
-                <ListItemText sx={{ opacity: open ? 1 : 0 }}>Van Assignments</ListItemText>
-              </ListItemButton>
+                  <ListItemIcon
+                    sx={{
+                      minWidth: 0,
+                      mr: open ? 3 : 'auto',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    <AssignmentIcon />
+                  </ListItemIcon>
+                  <ListItemText sx={{ opacity: open ? 1 : 0 }}>Van Assignments</ListItemText>
+                </ListItemButton>
+              </Link>
             </ListItem>
 
             <ListItem disablePadding sx={{ display: 'block' }}>
-              <ListItemButton
-                sx={{
-                  minHeight: 48,
-                  justifyContent: open ? 'initial' : 'center',
-                  px: 2.5,
-                }}
+              <Link
+                to={"/"}
               >
-                <ListItemIcon
+                <ListItemButton
                   sx={{
-                    minWidth: 0,
-                    mr: open ? 3 : 'auto',
-                    justifyContent: 'center',
+                    minHeight: 48,
+                    justifyContent: open ? 'initial' : 'center',
+                    px: 2.5,
                   }}
                 >
-                  <HomeIcon />
-                </ListItemIcon>
-                <ListItemText sx={{ opacity: open ? 1 : 0 }}>Dispatch Dashboard</ListItemText>
-              </ListItemButton>
+                  <ListItemIcon
+                    sx={{
+                      minWidth: 0,
+                      mr: open ? 3 : 'auto',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    <HomeIcon />
+                  </ListItemIcon>
+                  <ListItemText sx={{ opacity: open ? 1 : 0 }}>Dispatch Dashboard</ListItemText>
+                </ListItemButton>
+              </Link>
             </ListItem>
-            
+
             <ListItem disablePadding sx={{ display: 'block' }}>
-              <ListItemButton
-                sx={{
-                  marginTop: 50,
-                  minHeight: 48,
-                  justifyContent: open ? 'initial' : 'center',
-                  px: 2.5,
-                }}
+              <Link
+                to={"/Account"}
               >
-                <ListItemIcon
+                <ListItemButton
                   sx={{
-                    minWidth: 0,
-                    mr: open ? 3 : 'auto',
-                    justifyContent: 'center',
+                    marginTop: 50,
+                    minHeight: 48,
+                    justifyContent: open ? 'initial' : 'center',
+                    px: 2.5,
                   }}
                 >
-                  <AccountCircleIcon />
-                </ListItemIcon>
-                <ListItemText sx={{ opacity: open ? 1 : 0 }}>DSP Info</ListItemText>
-              </ListItemButton>
+                  <ListItemIcon
+                    sx={{
+                      minWidth: 0,
+                      mr: open ? 3 : 'auto',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    <AccountCircleIcon />
+                  </ListItemIcon>
+                  <ListItemText sx={{ opacity: open ? 1 : 0 }}>DSP Info</ListItemText>
+                </ListItemButton>
+              </Link>
             </ListItem>
 
           </List>
 
         </Box>
       </Drawer>
+
     </Box>
   );
 }
