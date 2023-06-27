@@ -1,7 +1,10 @@
 import './App.css';
 import React from 'react';
+
 import Sidebar from './components/SideBar';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { Box } from '@mui/system';
+
 import { Routes, Route, Outlet } from "react-router-dom";
 import Account from "./pages/Account";
 import Associates from "./pages/Associates";
@@ -15,22 +18,27 @@ import WeeklyRoster from "./pages/WeeklyRoster";
 function App() {
 
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="Account" element={<Account />} />
-        <Route path="Associates" element={<Associates />} />
-        <Route path="DailyLog" element={<DailyLog />} />
-        <Route path="Reports" element={<Reports />} />
-        <Route path="VanAssignments" element={<VanAssignments />} />
-        <Route path="VanData" element={<VanData />} />
-        <Route path="WeeklyRoster" element={<WeeklyRoster />} />
-      </Routes>
-
+    <Box sx={{ display: 'flex' }}>
       <Sidebar />
-      <Outlet />
 
-    </div>
+      <Box
+        sx={{
+          flex: 1,
+          padding: 3,
+        }}
+      >
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="Account" element={<Account />} />
+          <Route path="Associates" element={<Associates />} />
+          <Route path="DailyLog" element={<DailyLog />} />
+          <Route path="Reports" element={<Reports />} />
+          <Route path="VanAssignments" element={<VanAssignments />} />
+          <Route path="VanData" element={<VanData />} />
+          <Route path="WeeklyRoster" element={<WeeklyRoster />} />
+        </Routes>
+      </Box>
+    </Box>
   );
 }
 
