@@ -18,7 +18,14 @@ import WeeklyRoster from "./pages/WeeklyRoster";
 function App() {
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box 
+    sx={{ 
+      marginLeft: 10,
+      transition: 'margin-left 0.3s',
+      position: 'relative',
+      zIndex: 0,
+    }}
+    >
       <Sidebar />
 
       <Box

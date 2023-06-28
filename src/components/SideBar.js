@@ -70,7 +70,20 @@ export default function Sidebar() {
   };
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box 
+    component="nav"
+    sx={{
+      width: drawerWidth,
+      flexShrink: 0,
+      whiteSpace: 'nowrap',
+      transition: 'width 0.3s',
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      bottom: 0,
+      zIndex: 1,
+    }}
+    >
       <CssBaseline />
       <Drawer variant='permanent' open={open}>
 
