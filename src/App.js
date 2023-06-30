@@ -23,8 +23,10 @@ function App() {
 
       <Box
         sx={{
-          flex: 1,
-          padding: 3,
+          marginLeft: 10,
+          transtion: 'margin-left 0.3s',
+          position: 'relative',
+          zIndex: 0,
         }}
       >
         <Routes>

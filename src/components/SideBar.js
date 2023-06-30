@@ -70,7 +70,20 @@ export default function Sidebar() {
   };
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box
+      component="nav"
+      sx={{
+        width: drawerWidth,
+        flexShrink: 0,
+        whiteSpace: 'nowrap',
+        transtion: 'width 0.3s',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        bottom: 0,
+        zIndex: 1,
+      }}
+    >
       <CssBaseline />
       <Drawer variant='permanent' open={open}>
 
@@ -116,256 +129,256 @@ export default function Sidebar() {
             anchor: 'bottom',
           }}
         >
-          
+
           <List>
-  <ListItem disablePadding sx={{ display: 'block' }}>
-    <ListItemButton
-      component={NavLink}
-      to="/DailyLog"
-      activeClassName="active" // Custom class name for the active link
-      sx={{
-        minHeight: 48,
-        justifyContent: open ? 'initial' : 'center',
-        px: 2.5,
-      }}
-    >
-      <ListItemIcon
-        sx={{
-          minWidth: 0,
-          mr: open ? 3 : 'auto',
-          justifyContent: 'center',
-        }}
-      >
-        <AssessmentIcon />
-      </ListItemIcon>
-      <ListItemText
-        primary="Daily Log"
-        sx={{
-          opacity: open ? 1 : 0,
-          textDecoration: 'none',
-          color: 'inherit',
-        }}
-      />
-    </ListItemButton>
-  </ListItem>
+            <ListItem disablePadding sx={{ display: 'block' }}>
+              <ListItemButton
+                component={NavLink}
+                to="/DailyLog"
+                activeClassName="active" // Custom class name for the active link
+                sx={{
+                  minHeight: 48,
+                  justifyContent: open ? 'initial' : 'center',
+                  px: 2.5,
+                }}
+              >
+                <ListItemIcon
+                  sx={{
+                    minWidth: 0,
+                    mr: open ? 3 : 'auto',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <AssessmentIcon />
+                </ListItemIcon>
+                <ListItemText
+                  primary="Daily Log"
+                  sx={{
+                    opacity: open ? 1 : 0,
+                    textDecoration: 'none',
+                    color: 'inherit',
+                  }}
+                />
+              </ListItemButton>
+            </ListItem>
 
-  <ListItem disablePadding sx={{ display: 'block' }}>
-    <ListItemButton
-      component={NavLink}
-      to="/WeeklyRoster"
-      activeClassName="active" // Custom class name for the active link
-      sx={{
-        minHeight: 48,
-        justifyContent: open ? 'initial' : 'center',
-        px: 2.5,
-      }}
-    >
-      <ListItemIcon
-        sx={{
-          minWidth: 0,
-          mr: open ? 3 : 'auto',
-          justifyContent: 'center',
-        }}
-      >
-        <ViewWeekIcon />
-      </ListItemIcon>
-      <ListItemText
-        primary="Weekly Roster"
-        sx={{
-          opacity: open ? 1 : 0,
-          textDecoration: 'none',
-          color: 'inherit',
-        }}
-      />
-    </ListItemButton>
-  </ListItem>
+            <ListItem disablePadding sx={{ display: 'block' }}>
+              <ListItemButton
+                component={NavLink}
+                to="/WeeklyRoster"
+                activeClassName="active" // Custom class name for the active link
+                sx={{
+                  minHeight: 48,
+                  justifyContent: open ? 'initial' : 'center',
+                  px: 2.5,
+                }}
+              >
+                <ListItemIcon
+                  sx={{
+                    minWidth: 0,
+                    mr: open ? 3 : 'auto',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <ViewWeekIcon />
+                </ListItemIcon>
+                <ListItemText
+                  primary="Weekly Roster"
+                  sx={{
+                    opacity: open ? 1 : 0,
+                    textDecoration: 'none',
+                    color: 'inherit',
+                  }}
+                />
+              </ListItemButton>
+            </ListItem>
 
-  <ListItem disablePadding sx={{ display: 'block' }}>
-    <ListItemButton
-      component={NavLink}
-      to="/Reports"
-      activeClassName="active" // Custom class name for the active link
-      sx={{
-        minHeight: 48,
-        justifyContent: open ? 'initial' : 'center',
-        px: 2.5,
-      }}
-    >
-      <ListItemIcon
-        sx={{
-          minWidth: 0,
-          mr: open ? 3 : 'auto',
-          justifyContent: 'center',
-        }}
-      >
-        <ReportIcon />
-      </ListItemIcon>
-      <ListItemText
-        primary="Reports"
-        sx={{
-          opacity: open ? 1 : 0,
-          textDecoration: 'none',
-          color: 'inherit',
-        }}
-      />
-    </ListItemButton>
-  </ListItem>
+            <ListItem disablePadding sx={{ display: 'block' }}>
+              <ListItemButton
+                component={NavLink}
+                to="/Reports"
+                activeClassName="active" // Custom class name for the active link
+                sx={{
+                  minHeight: 48,
+                  justifyContent: open ? 'initial' : 'center',
+                  px: 2.5,
+                }}
+              >
+                <ListItemIcon
+                  sx={{
+                    minWidth: 0,
+                    mr: open ? 3 : 'auto',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <ReportIcon />
+                </ListItemIcon>
+                <ListItemText
+                  primary="Reports"
+                  sx={{
+                    opacity: open ? 1 : 0,
+                    textDecoration: 'none',
+                    color: 'inherit',
+                  }}
+                />
+              </ListItemButton>
+            </ListItem>
 
-  <ListItem disablePadding sx={{ display: 'block' }}>
-    <ListItemButton
-      component={NavLink}
-      to="/Associates"
-      activeClassName="active" // Custom class name for the active link
-      sx={{
-        minHeight: 48,
-        justifyContent: open ? 'initial' : 'center',
-        px: 2.5,
-      }}
-    >
-      <ListItemIcon
-        sx={{
-          minWidth: 0,
-          mr: open ? 3 : 'auto',
-          justifyContent: 'center',
-        }}
-      >
-        <Groups />
-      </ListItemIcon>
-      <ListItemText
-        primary="Delivery Associates"
-        sx={{
-          opacity: open ? 1 : 0,
-          textDecoration: 'none',
-          color: 'inherit',
-        }}
-      />
-    </ListItemButton>
-  </ListItem>
+            <ListItem disablePadding sx={{ display: 'block' }}>
+              <ListItemButton
+                component={NavLink}
+                to="/Associates"
+                activeClassName="active" // Custom class name for the active link
+                sx={{
+                  minHeight: 48,
+                  justifyContent: open ? 'initial' : 'center',
+                  px: 2.5,
+                }}
+              >
+                <ListItemIcon
+                  sx={{
+                    minWidth: 0,
+                    mr: open ? 3 : 'auto',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <Groups />
+                </ListItemIcon>
+                <ListItemText
+                  primary="Delivery Associates"
+                  sx={{
+                    opacity: open ? 1 : 0,
+                    textDecoration: 'none',
+                    color: 'inherit',
+                  }}
+                />
+              </ListItemButton>
+            </ListItem>
 
-  <ListItem disablePadding sx={{ display: 'block' }}>
-    <ListItemButton
-      component={NavLink}
-      to="/VanData"
-      activeClassName="active" // Custom class name for the active link
-      sx={{
-        minHeight: 48,
-        justifyContent: open ? 'initial' : 'center',
-        px: 2.5,
-      }}
-    >
-      <ListItemIcon
-        sx={{
-          minWidth: 0,
-          mr: open ? 3 : 'auto',
-          justifyContent: 'center',
-        }}
-      >
-        <Delivery />
-      </ListItemIcon>
-      <ListItemText
-        primary="Van Database"
-        sx={{
-          opacity: open ? 1 : 0,
-          textDecoration: 'none',
-          color: 'inherit',
-        }}
-      />
-    </ListItemButton>
-  </ListItem>
+            <ListItem disablePadding sx={{ display: 'block' }}>
+              <ListItemButton
+                component={NavLink}
+                to="/VanData"
+                activeClassName="active" // Custom class name for the active link
+                sx={{
+                  minHeight: 48,
+                  justifyContent: open ? 'initial' : 'center',
+                  px: 2.5,
+                }}
+              >
+                <ListItemIcon
+                  sx={{
+                    minWidth: 0,
+                    mr: open ? 3 : 'auto',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <Delivery />
+                </ListItemIcon>
+                <ListItemText
+                  primary="Van Database"
+                  sx={{
+                    opacity: open ? 1 : 0,
+                    textDecoration: 'none',
+                    color: 'inherit',
+                  }}
+                />
+              </ListItemButton>
+            </ListItem>
 
-  <ListItem disablePadding sx={{ display: 'block' }}>
-    <ListItemButton
-      component={NavLink}
-      to="/VanAssignments"
-      activeClassName="active" // Custom class name for the active link
-      sx={{
-        minHeight: 48,
-        justifyContent: open ? 'initial' : 'center',
-        px: 2.5,
-      }}
-    >
-      <ListItemIcon
-        sx={{
-          minWidth: 0,
-          mr: open ? 3 : 'auto',
-          justifyContent: 'center',
-        }}
-      >
-        <AssignmentIcon />
-      </ListItemIcon>
-      <ListItemText
-        primary="Van Assignments"
-        sx={{
-          opacity: open ? 1 : 0,
-          textDecoration: 'none',
-          color: 'inherit',
-        }}
-      />
-    </ListItemButton>
-  </ListItem>
+            <ListItem disablePadding sx={{ display: 'block' }}>
+              <ListItemButton
+                component={NavLink}
+                to="/VanAssignments"
+                activeClassName="active" // Custom class name for the active link
+                sx={{
+                  minHeight: 48,
+                  justifyContent: open ? 'initial' : 'center',
+                  px: 2.5,
+                }}
+              >
+                <ListItemIcon
+                  sx={{
+                    minWidth: 0,
+                    mr: open ? 3 : 'auto',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <AssignmentIcon />
+                </ListItemIcon>
+                <ListItemText
+                  primary="Van Assignments"
+                  sx={{
+                    opacity: open ? 1 : 0,
+                    textDecoration: 'none',
+                    color: 'inherit',
+                  }}
+                />
+              </ListItemButton>
+            </ListItem>
 
-  <ListItem disablePadding sx={{ display: 'block' }}>
-    <ListItemButton
-      component={NavLink}
-      to="/"
-      activeClassName="active" // Custom class name for the active link
-      sx={{
-        minHeight: 48,
-        justifyContent: open ? 'initial' : 'center',
-        px: 2.5,
-      }}
-    >
-      <ListItemIcon
-        sx={{
-          minWidth: 0,
-          mr: open ? 3 : 'auto',
-          justifyContent: 'center',
-        }}
-      >
-        <HomeIcon />
-      </ListItemIcon>
-      <ListItemText
-        primary="Dispatch Dashboard"
-        sx={{
-          opacity: open ? 1 : 0,
-          textDecoration: 'none',
-          color: 'inherit',
-        }}
-      />
-    </ListItemButton>
-  </ListItem>
+            <ListItem disablePadding sx={{ display: 'block' }}>
+              <ListItemButton
+                component={NavLink}
+                to="/"
+                activeClassName="active" // Custom class name for the active link
+                sx={{
+                  minHeight: 48,
+                  justifyContent: open ? 'initial' : 'center',
+                  px: 2.5,
+                }}
+              >
+                <ListItemIcon
+                  sx={{
+                    minWidth: 0,
+                    mr: open ? 3 : 'auto',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <HomeIcon />
+                </ListItemIcon>
+                <ListItemText
+                  primary="Dispatch Dashboard"
+                  sx={{
+                    opacity: open ? 1 : 0,
+                    textDecoration: 'none',
+                    color: 'inherit',
+                  }}
+                />
+              </ListItemButton>
+            </ListItem>
 
-  <ListItem disablePadding sx={{ display: 'block', marginTop: 50 }}>
-    <ListItemButton
-      component={NavLink}
-      to="/Account"
-      activeClassName="active" // Custom class name for the active link
-      sx={{
-        minHeight: 48,
-        justifyContent: open ? 'initial' : 'center',
-        px: 2.5,
-      }}
-    >
-      <ListItemIcon
-        sx={{
-          minWidth: 0,
-          mr: open ? 3 : 'auto',
-          justifyContent: 'center',
-        }}
-      >
-        <AccountCircleIcon />
-      </ListItemIcon>
-      <ListItemText
-        primary="DSP Info"
-        sx={{
-          opacity: open ? 1 : 0,
-          textDecoration: 'none',
-          color: 'inherit',
-        }}
-      />
-    </ListItemButton>
-  </ListItem>
-</List>
+            <ListItem disablePadding sx={{ display: 'block', marginTop: 50 }}>
+              <ListItemButton
+                component={NavLink}
+                to="/Account"
+                activeClassName="active" // Custom class name for the active link
+                sx={{
+                  minHeight: 48,
+                  justifyContent: open ? 'initial' : 'center',
+                  px: 2.5,
+                }}
+              >
+                <ListItemIcon
+                  sx={{
+                    minWidth: 0,
+                    mr: open ? 3 : 'auto',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <AccountCircleIcon />
+                </ListItemIcon>
+                <ListItemText
+                  primary="DSP Info"
+                  sx={{
+                    opacity: open ? 1 : 0,
+                    textDecoration: 'none',
+                    color: 'inherit',
+                  }}
+                />
+              </ListItemButton>
+            </ListItem>
+          </List>
 
 
         </Box>
