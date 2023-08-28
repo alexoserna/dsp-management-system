@@ -16,6 +16,7 @@ import ViewWeekIcon from '@mui/icons-material/ViewWeek';
 import AssessmentIcon from '@mui/icons-material/Assessment';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { NavLink } from 'react-router-dom';
+import Backdrop from '@mui/material/Backdrop';
 
 const drawerWidth = 240;
 
@@ -393,6 +394,8 @@ export default function Sidebar() {
         </Box>
 
       </Drawer>
+
+      <Backdrop open={open} />
       
     </Box>
   );

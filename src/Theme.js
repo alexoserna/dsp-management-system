@@ -42,6 +42,10 @@ const theme = createTheme({
         secondary: {
             main: '#f50057',
         },
+        action: {
+            active: '#3d3d3d',
+            hover: '#3d3d3d',
+        },
     },
     // Customize other aspects of the theme such as typography, spacing, etc.
 });
