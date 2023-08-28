@@ -108,11 +108,11 @@ export default function Sidebar() {
           sx={{
             display: open ? 'block' : 'none',
             position: 'absolute',
-            top: theme.spacing(1),
-            right: theme.spacing(1),
+            top: theme.spacing(2),
+            right: theme.spacing(2),
             zIndex: theme.zIndex.drawer + 1,
             borderRadius: '50%',
-            backgroundColor: theme.palette.background.paper,
+            backgroundColor: theme.palette.background,
             '&:hover': {
               backgroundColor: theme.palette.action.hover,
             },
@@ -131,6 +131,8 @@ export default function Sidebar() {
         >
 
           <List>
+
+            {/* Daily Log */}
             <ListItem disablePadding sx={{ display: 'block' }}>
               <ListItemButton
                 component={NavLink}
@@ -162,6 +164,7 @@ export default function Sidebar() {
               </ListItemButton>
             </ListItem>
 
+            {/* Weekly Roster */}
             <ListItem disablePadding sx={{ display: 'block' }}>
               <ListItemButton
                 component={NavLink}
@@ -193,6 +196,7 @@ export default function Sidebar() {
               </ListItemButton>
             </ListItem>
 
+            {/* Reports */}
             <ListItem disablePadding sx={{ display: 'block' }}>
               <ListItemButton
                 component={NavLink}
@@ -224,6 +228,7 @@ export default function Sidebar() {
               </ListItemButton>
             </ListItem>
 
+            {/* Delivery Associates */}
             <ListItem disablePadding sx={{ display: 'block' }}>
               <ListItemButton
                 component={NavLink}
@@ -255,6 +260,7 @@ export default function Sidebar() {
               </ListItemButton>
             </ListItem>
 
+            {/* Van Database */}
             <ListItem disablePadding sx={{ display: 'block' }}>
               <ListItemButton
                 component={NavLink}
@@ -286,6 +292,7 @@ export default function Sidebar() {
               </ListItemButton>
             </ListItem>
 
+            {/* Van Assignments */}
             <ListItem disablePadding sx={{ display: 'block' }}>
               <ListItemButton
                 component={NavLink}
@@ -317,6 +324,7 @@ export default function Sidebar() {
               </ListItemButton>
             </ListItem>
 
+            {/* Dispatch Dashboard */}
             <ListItem disablePadding sx={{ display: 'block' }}>
               <ListItemButton
                 component={NavLink}
@@ -348,7 +356,8 @@ export default function Sidebar() {
               </ListItemButton>
             </ListItem>
 
-            <ListItem disablePadding sx={{ display: 'block', marginTop: 50 }}>
+            {/* This is for the bottom account button */}
+            <ListItem disablePadding sx={{ display: 'block', marginTop: 35 }}>
               <ListItemButton
                 component={NavLink}
                 to="/Account"
@@ -378,11 +387,13 @@ export default function Sidebar() {
                 />
               </ListItemButton>
             </ListItem>
+
           </List>
 
-
         </Box>
+
       </Drawer>
+      
     </Box>
   );
 }

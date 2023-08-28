@@ -23,6 +23,17 @@ const theme = createTheme({
                 },
             },
         },
+        MuiIconButton : {
+            styleOverrides: {
+                root: {
+                    width: '40px',
+                    height: '40px',
+                    backgroundColor: '#333333',
+                    color: '#ffc107',
+                    borderRadius: '50%',
+                },
+            },
+        },
     },
     palette: {
         primary: {
